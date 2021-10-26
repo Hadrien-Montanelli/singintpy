@@ -1,6 +1,6 @@
 # About
 Python package for computing singular &amp; near-singular integrals on curved triangles. The code is used the following paper:
-- H. Montanelli, M. Aussal &amp; H. Haddar, Computing weakly singular and near-singular integrals in high-order boundary elements, submitted (2021)
+- H. Montanelli, M. Aussal &amp; H. Haddar, Computing weakly singular and near-singular integrals in high-order boundary elements, submitted to SISC (2021)
 
 # Installation
 
