@@ -19,7 +19,12 @@ To clone the chebpy repository, first navigate in a terminal to where you want t
 git clone https://github.com/Hadrien-Montanelli/singintpy.git
 ```
 
-Any comment or question, send an email to: hadrien.montanelli@gmail.com
+# Getting started
+
+Take a look at `example_singint1` and `example_singint2` &mdash; happy computing!
 
 # License
 See `LICENSE.txt` for licensing information.
+
+
+Any comment or question, send an email to: hadrien.montanelli@gmail.com
