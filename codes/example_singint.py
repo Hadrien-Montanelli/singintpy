@@ -80,7 +80,7 @@ A = np.vstack((a1, a2, a3, a4, a5, a6))
 u0, v0, dz0 = 0.2, 0.4, 1e-4
 x0 = map_func(A)([u0, v0]) + dz0*np.array([0, 0, 1])
 
-# Compute integral with singint2 for increasing quadrature sizes:
+# Compute integral with singint for increasing quadrature sizes:
 nn = np.array([2, 5, 10, 20, 50, 100, 200])
 error1 = []
 error2 = []
@@ -154,13 +154,13 @@ Iex = sauterschwab(20, a, b, c)
 end = time.time()
 print(f'Time:  {end-start:.4f}s') 
 
-# Compute integral with singint2 for increasing quadrature sizes:
+# Compute integral with singint for increasing quadrature sizes:
 mm = np.arange(4, 16, 2)
 error1 = []
 error2 = []
 error3 = []
-start = time.time()
 for m in mm:
+    start = time.time()
     x, w = np.polynomial.legendre.leggauss(m)
     I1 = 0
     I2 = 0
@@ -172,14 +172,14 @@ for m in mm:
             wij = 1/8*w[i]*(1 + x[i])*w[j]
             yij = np.array([aij, bij])
             Nij = np.linalg.norm(np.cross(J[0](yij), J[1](yij)))
-            I1 += wij * Nij * singint(A, F(yij), m-1, 1)
-            I2 += wij * Nij * singint(A, F(yij), m-1, 2)
-            I3 += wij * Nij * singint(A, F(yij), m-1, 3)
+            I1 += wij * Nij * singint(A, F(yij), m-1, -1)
+            I2 += wij * Nij * singint(A, F(yij), m-1, 0)
+            I3 += wij * Nij * singint(A, F(yij), m-1, 1)
     error1.append(np.abs(I1 - Iex)/Iex)
     error2.append(np.abs(I2 - Iex)/Iex)
     error3.append(np.abs(I3 - Iex)/Iex)
-end = time.time()
-print(f'Time:  {end-start:.4f}s') 
+    end = time.time()
+    print(f'Time:  {end-start:.4f}s') 
 
 # Plot:
 fig, ax = plt.subplots()
