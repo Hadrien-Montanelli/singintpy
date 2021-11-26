@@ -21,7 +21,7 @@ git clone https://github.com/Hadrien-Montanelli/singintpy.git
 
 # Getting started
 
-Take a look at `example_singint1` and `example_singint2` &mdash; happy computing!
+Take a look at `example_singint` &mdash; happy computing!
 
 # License
 See `LICENSE.txt` for licensing information.
