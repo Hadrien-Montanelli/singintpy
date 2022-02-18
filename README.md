@@ -1,5 +1,5 @@
 # About
-Python package for computing singular &amp; near-singular integrals on curved triangles. The code is used the following paper:
+Python package for computing singular &amp; near-singular integrals on quadratic triangles. The code is used the following paper:
 - H. Montanelli, M. Aussal &amp; H. Haddar, <i>Computing weakly singular and near-singular integrals in high-order boundary elements</i>, submitted
 
 # Installation
