@@ -34,6 +34,8 @@ rc_fonts = {
     'font.size': 12
 }
 rcParams.update(rc_fonts)
+import warnings
+warnings.filterwarnings("ignore", category=np.VisibleDeprecationWarning) 
 
 # %% Integral over a curved triangle (for a given quadrature size):
 
@@ -77,10 +79,11 @@ a6 = np.array([0, 0.5, 0])
 A = np.vstack((a1, a2, a3, a4, a5, a6))
 
 # Source point x0:
-u0, v0, dz0 = 0.2, 0.4, 1e-4
+u0, v0, dz0 = 0.5, 0.5, 0
 x0 = map_func(A)([u0, v0]) + dz0*np.array([0, 0, 1])
 
 # Compute integral with singint for increasing quadrature sizes:
+Iex = singintex(u0, v0, dz0)
 nn = np.array([2, 5, 10, 20, 50, 100, 200])
 error1 = []
 error2 = []

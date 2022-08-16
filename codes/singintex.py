@@ -35,6 +35,12 @@ def singintex(u0, v0, dz0):
         Iex = 3.234785969247374
     if (u0 == .2) and (v0 == .4) and (dz0 == 1e-2): # near-singularity 
         Iex = 3.188154928666069
+    if (u0 == .2) and (v0 == .4) and (dz0 == 1e-1): # near-singularity 
+        Iex = 2.762090628529887
+    if (u0 == .2) and (v0 == .4) and (dz0 == 1e0): # near-singularity 
+        Iex = 0.8597262637971332
+    if (u0 == .2) and (v0 == .4) and (-dz0 == 1e-4): # near-singularity 
+        Iex = 3.239500821128147
                         
     # Point near the a1-a2 vertex:
     if (u0 == .5) and (v0 == 1e-1) and (dz0 == 0): # singularity 
@@ -81,6 +87,8 @@ def singintex(u0, v0, dz0):
         Iex = 2.287401516483698
     if (u0 == .5) and (v0 == 0) and (dz0 == 1e-4): # near-singularity 
         Iex = 2.288142624570126
+    if (u0 == .5) and (v0 == 0) and (dz0 == 1e-2): # near-singularity 
+        Iex = 2.308036432953315
         
     # Point near the a2-a3 vertex:
     if (u0 == .5) and (v0 == 0.5-1e-1) and (dz0 == 0): # singularity 

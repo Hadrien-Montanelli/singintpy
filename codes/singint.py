@@ -87,6 +87,7 @@ def singint(A, x0, n, p, trans=[True, True, True], optim='BFGS', quad='numerical
         elif (p == 1):
             I1 = compute_I1(x0h, h, eh, J, H, scl*n, trans, tol)
             I = In1 + I0 + I1 + Ireg
+            
     return I
 
 def locate_sing(x0, F, J, H, method, tol):
@@ -293,7 +294,7 @@ def compute_Ireg(x0, x0h, h, eh, F, J, H, n, p):
         reg_func = lambda x: sing_func(x) - Tn1(x) - T0(x)
     elif (p == 1):
         reg_func = lambda x: sing_func(x) - Tn1(x) - T0(x) - T1(x)
-    
+        
     # 2D Gauss quadrature:
     x, w = np.polynomial.legendre.leggauss(n)
     W = 1/8 * np.outer(w*(1 + x), w)
