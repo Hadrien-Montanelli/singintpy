@@ -35,7 +35,7 @@ def sauterschwab(n, a, b, c):
     References
     ----------
     [1] H. Montanelli, M. Aussal and H. Haddar, Computing weakly singular and 
-    near-singular integrals in high-order boundary elements, submitted.
+    near-singular integrals in high-order boundary elements, SISC (2022).
     [2] S. Sauter and C. Schwab, Boundary Element Methods, Springer, 2011.
     """
     # Mapping and Jacobian:

@@ -24,7 +24,7 @@ def singintex(u0, v0, dz0):
     # References
     # ----------
     # [1] H. Montanelli, M. Aussal and H. Haddar, Computing weakly singular and 
-    # near-singular integrals in high-order boundary elements, submitted.
+    # near-singular integrals in high-order boundary elements, SISC (2022).
     # """
     # Point near the center:
     if (u0 == .2) and (v0 == .4) and (dz0 == 0): # singularity 

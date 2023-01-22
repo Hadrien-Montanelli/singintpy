@@ -52,7 +52,7 @@ def singint(A, x0, n, p, trans=[True, True, True], optim='BFGS', quad='numerical
     References
     ----------
     [1] H. Montanelli, M. Aussal and H. Haddar, Computing weakly singular and 
-    near-singular integrals in high-order boundary elements, submitted.
+    near-singular integrals in high-order boundary elements, SISC (2022).
     """
     # Tolerance for optimization and near-singularities:
     tol = 1e-12

@@ -8,7 +8,7 @@ Copyright 2021 by Hadrien Montanelli.
 Note: This is the code displayed in Appendix D of [1].
 
 [1] H. Montanelli, M. Aussal and H. Haddar, Computing weakly singular and 
-near-singular integrals in high-order boundary elements, submitted.
+near-singular integrals in high-order boundary elements, SISC (2022).
 """
 
 # Imports:

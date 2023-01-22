@@ -10,7 +10,7 @@ Copyright 2021 by Hadrien Montanelli.
 Note: This code reproduces the numerical experiments of [1, Sec. 4].
 
 [1] H. Montanelli, M. Aussal and H. Haddar, Computing weakly singular and 
-near-singular integrals in high-order boundary elements, submitted.
+near-singular integrals in high-order boundary elements, SISC (2022).
 """
 
 # Imports:
@@ -21,16 +21,20 @@ from sauterschwab import sauterschwab
 from singint import map_func, map_jac, singint
 from singintex import singintex
 import os
-os.environ['PATH'] += ':/usr/local/texlive/2017/bin/x86_64-darwin'
+import socket
+if socket.gethostname() == 'Hadriens-MacBook-Pro-13.local':
+    os.environ['PATH'] += ':/usr/local/texlive/2017/bin/x86_64-darwin'
+elif socket.gethostname() == 'Hadriens-MacBook-Pro-20.local':
+    os.environ['PATH'] += ':/usr/local/texlive/2022/bin/universal-darwin/'
 import time
 
 # Plot options:
 rc_fonts = {
     "text.usetex": True,
-    'text.latex.preview': True,
+    #'text.latex.preview': True,
     'mathtext.default': 'it',
     'mathtext.fontset': 'cm',
-    'text.latex.preamble': [r'\usepackage{amsmath}'],
+    'text.latex.preamble': r'\usepackage{{amsmath}}',
     'font.size': 12
 }
 rcParams.update(rc_fonts)
@@ -138,7 +142,7 @@ plt.savefig('../images/convergence_2D.pdf', dpi=256)
 # %% Integral over two curved triangles (convergence with quadrature size):
 
 # Define a curved triangle:
-a, b, c = 0.5, 0.5, 1
+a, b, c = 0.5, 0.5, 0
 a1 = np.array([0, 0, 0])
 a2 = np.array([1, 0, 0])
 a3 = np.array([0, 1, 0])
